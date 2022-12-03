@@ -1,11 +1,21 @@
 ﻿// 19. Принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
-try
+
+Console.WriteLine("Введите число: ");
+string number = Console.ReadLine();
+int pol = number.Length;
+
+if (pol == 5)
 {
-    int[] array = { 1, 2, 3, 2, 1 };
-    if (array[0] == array[4] && array[1] == array[3]) Console.WriteLine("Число палиндром");
-    else Console.WriteLine("Число не палиндром");
+ if (number[0] == number[4] && number[1] == number[3])
+    {
+ Console.WriteLine($"{number} - палиндром");
+    }
+ else
+    {
+ Console.WriteLine($"{number} - НЕ палиндром");
+    }
 }
-catch
+else
 {
-    Console.WriteLine("Введите именно цифры!")
+ Console.WriteLine($"ОШИБКА: Введите пятизначное число!");
 }
